@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Georgia", serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-bg: #0A0A0B;
+  --color-surface: #161618;
+  --color-border: #2D2D30;
+  --color-accent: #C5A059;
+  --color-text-main: #E1E1E1;
+  --color-text-dim: #8E8E93;
+  --color-success: #4ADE80;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-main font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, .serif {
+    @apply font-serif;
+  }
+}
+
+.luxury-card {
+  @apply bg-surface border border-border rounded-xl shadow-sm;
+}
+
+.glass {
+  @apply bg-surface/80 backdrop-blur-md border border-border;
+}
+
+.btn-primary {
+  @apply bg-accent text-bg hover:opacity-90 transition-opacity font-semibold;
+}
+
+.btn-secondary {
+  @apply border border-border text-text-main hover:bg-white/5 transition-colors font-semibold;
+}
+
+.status-badge {
+  @apply flex items-center gap-2 text-xs text-success bg-success/10 px-3 py-1.5 rounded-full;
+}
+
+.nav-label {
+  @apply text-[10px] uppercase tracking-[2px] text-text-dim mb-4 block;
+}

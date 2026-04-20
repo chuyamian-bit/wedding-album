@@ -1,0 +1,6 @@
+{
+  "name": "Vows & Views",
+  "description": "A sophisticated wedding photo sharing platform where guests can instantly capture and upload memories to a live event gallery via QR codes.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["photo_sharing", "real_time_gallery", "qr_code_access"]
+}
